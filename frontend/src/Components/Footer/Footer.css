@@ -1,0 +1,111 @@
+/* Footer.css */
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('/src/assets/footer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    width: 100%; /* Full width */
+  }
+  
+  .section1 h1 {
+    color: #c30281;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .section1 p {
+    color: #e0e0e0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    max-width: 400px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .section2, .section3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .section2 h3, .section3 h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .section2 p, .section3 p {
+    color: #ddd;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    width: fit-content;
+    padding-bottom: 3px;
+  }
+  
+  .section2 p:hover, .section3 p:hover {
+    color: #c30281;
+    transform: translateX(5px);
+  }
+  
+  .section2 p::before, .section3 p::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #c30281;
+  }
+  
+  .section2 p:hover::before, .section3 p:hover::before {
+    opacity: 1;
+    left: -15px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      text-align: center;
+      background-attachment: fixed;
+    }
+  
+    .section1 p {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  
+    .section2, .section3 {
+      align-items: center;
+    }
+  
+    .section2 p, .section3 p {
+      text-align: center;
+    }
+  
+    .section2 p::before, .section3 p::before {
+      display: none;
+    }
+  
+    .section2 p:hover, .section3 p:hover {
+      transform: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 3rem 1rem;
+    }
+  }

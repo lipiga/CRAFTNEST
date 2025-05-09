@@ -1,0 +1,129 @@
+/* ExploreMenu.css */
+.explore-menu {
+    padding: 2rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .explore-menu h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .products {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+  }
+  
+  .explore-menu-text {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    font-size: 1.2rem;
+  }
+  
+  /* Grid layout instead of scrolling */
+  .explore-menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .explore-menu-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 140px;
+  }
+  
+  .explore-menu-list-item img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+  }
+  
+  .explore-menu-list-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .explore-menu-list-item img.active {
+    border: 4px solid #c30281;
+    box-shadow: 0 4px 15px rgba(195, 2, 129, 0.3);
+  }
+  
+  .explore-menu-list-item p {
+    margin-top: 1.2rem;
+    font-weight: 600;
+    color: #555;
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  
+  .explore-menu-list-item:hover p {
+    color: #c30281;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .explore-menu-list {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .explore-menu-list-item img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .explore-menu {
+      padding: 3rem 1.5rem;
+    }
+    
+    .explore-menu-list {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1.2rem;
+    }
+    
+    .explore-menu-list-item img {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .explore-menu-list-item p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .explore-menu-list {
+      grid-template-columns: repeat(4, 1fr); /* 4 items per row on mobile */
+      gap: 1rem;
+    }
+    
+    .explore-menu-list-item {
+      width: auto;
+    }
+    
+    .explore-menu-list-item img {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .explore-menu-list-item p {
+      font-size: 0.9rem;
+    }
+  }

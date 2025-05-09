@@ -1,0 +1,31 @@
+.add{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   
+}
+.add p{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+form.form-container{
+    border: 2px solid #c30281;
+    margin: 60px 200px;
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+input.input-tag,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    border: 2px solid #c30281;
+}

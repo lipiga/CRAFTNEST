@@ -1,0 +1,115 @@
+/* Main container */
+/* Add Products page CSS */
+.add {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-top: 0; /* Remove top padding since header is sticky */
+  padding-bottom: 20px;
+}
+
+.form-container {
+  max-width: 1000px;
+  border: 2px solid #c30281;
+  margin: 2rem auto 0; /* Add top margin to account for sticky header */
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Rest of your existing Add Products CSS remains the same */
+  
+  .form-container p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #5d576b;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  
+  /* Form groups */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #5d576b;
+    font-size: 0.9rem;
+  }
+  
+  /* Input fields */
+  .input-tag {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c30281;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+  }
+  
+  .input-tag:focus {
+    outline: none;
+    border-color: #c30281;
+    box-shadow: 0 0 0 3px rgba(249, 84, 188, 0.3);
+  }
+  
+  /* Textarea specific */
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c30281;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+    background-color: #f9fafb;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #c30281;
+    box-shadow: 0 0 0 3px rgba(249, 84, 188, 0.3);
+  }
+  
+  /* Select dropdown */
+  .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #c30281;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9fafb;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group select:focus {
+    outline: none;
+    border-color: #c30281;
+    box-shadow: 0 0 0 3px rgba(249, 84, 188, 0.3);
+  }
+  
+  /* Submit button */
+  .form-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #c30281;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: #bc1c84;
+  }
+textarea::-webkit-scrollbar{
+    display: none;
+}

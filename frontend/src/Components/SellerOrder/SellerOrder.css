@@ -1,0 +1,162 @@
+/* Main Container */
+.seller-order-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.seller-order-header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.seller-order-header h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Grid Layout */
+.seller-order-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.seller-order-grid-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 2fr 2fr 2fr;
+    padding: 12px 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.seller-order-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 2fr 2fr 2fr;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.seller-order-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Product Column */
+.seller-order-product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+/* Details Column */
+.seller-order-product-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.seller-order-product-category {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Payment Column */
+.seller-order-col-payment {
+    font-weight: 500;
+}
+
+.seller-order-col-payment.cash-on-delivery {
+    color: #e67e22;
+}
+
+.seller-order-col-payment.online-payment {
+    color: #27ae60;
+}
+
+.seller-order-payment-status {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.seller-order-payment-status.paid {
+    background-color: #d5f5e3;
+    color: #27ae60;
+}
+
+.seller-order-payment-status.pending {
+    background-color: #fdebd0;
+    color: #e67e22;
+}
+
+/* Address Column */
+.seller-order-customer-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.seller-order-customer-phone {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.seller-order-address-line {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Status Column */
+.seller-order-status-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 100%;
+    cursor: pointer;
+    font-size: 13px;
+    background-color: white;
+}
+
+.seller-order-status-select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Status Colors */
+.status-in-progress {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.status-shipped {
+    border-color: #f39c12;
+    color: #f39c12;
+}
+
+.status-out-for-delivery {
+    border-color: #9b59b6;
+    color: #9b59b6;
+}
+
+.status-delivered {
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.status-cancelled {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}

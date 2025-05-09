@@ -1,0 +1,87 @@
+/* OrderForm.css */
+.order-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-form-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .order-form-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .order-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .order-input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .order-input:focus {
+    outline: none;
+    border-color: #c30281;
+    box-shadow: 0 0 0 2px rgba(195, 2, 129, 0.1);
+  }
+  
+  .order-submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #c30281;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .order-submit-btn:hover {
+    background-color: #a0026a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(195, 2, 129, 0.2);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .order-form-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .order-form-container {
+      padding: 1.5rem;
+      margin: 1rem auto;
+    }
+    
+    .order-form-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  }

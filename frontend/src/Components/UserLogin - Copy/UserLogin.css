@@ -1,0 +1,79 @@
+.user-login{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px;
+}
+
+.user-login .register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-login .register form{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border: 6px solid #c30281;
+    position: relative;
+}
+.user-login .login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    padding: 5px 10px;
+    background-color: #c30281;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+.user-login .login-form form {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border: 6px solid #c30281;
+    position: relative;
+}
+
+input.inputs{
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+    border: 2px solid #c30281;
+}
+button{
+        padding: 10px 30px;
+            background: transparent;
+            outline: none;
+            border: 2px solid #c30281;
+            border-radius: 15px;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+}
+button:hover{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #c30281;
+    color: white;
+}
+span{
+    color: #c30281;
+    cursor: pointer;
+}
