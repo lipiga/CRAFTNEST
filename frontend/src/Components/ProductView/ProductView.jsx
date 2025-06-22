@@ -23,7 +23,7 @@ const ProductView = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/product/fetchproduct/${id}`);
+        const response = await axios.get(`https://craftnest-backend-v5ki.onrender.com/api/product/fetchproduct/${id}`);
         if (response.data.success) {
           setProduct(response.data.data);
         }
@@ -37,12 +37,12 @@ const ProductView = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/review/getreview/${id}`);
+      const response = await axios.get(`https://craftnest-backend-v5ki.onrender.com/api/review/getreview/${id}`);
       if (response.data.success) {
         // Fetch user details for each review
         const reviewsWithUserData = await Promise.all(
           response.data.data.map(async (review) => {
-            const userResponse = await axios.get(`http://localhost:4000/api/user/getuser/${review.userId}`);
+            const userResponse = await axios.get(`https://craftnest-backend-v5ki.onrender.com/api/user/getuser/${review.userId}`);
             return {
               ...review,
               user: userResponse.data.data
@@ -69,7 +69,7 @@ const ProductView = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:4000/api/cart/addtocart", {
+      const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/cart/addtocart", {
         user_id: userId,
         quantity: quantity,
         product_id: product._id,
@@ -96,7 +96,7 @@ const ProductView = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:4000/api/review/addreview", {
+      const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/review/addreview", {
         userId: userId,
         productId: id,
         review: newReview
