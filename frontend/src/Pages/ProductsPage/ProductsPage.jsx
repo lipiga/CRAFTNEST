@@ -7,14 +7,14 @@ import Footer from '../../Components/Footer/Footer'
 import { ToastContainer } from 'react-toastify'
 import './ProductsPage.css'
 
-const ProductsPage = () => {
+const ProductsPage = ({ setShowuserlogin, setUsertype }) => {
   const [category, setCategory] = useState("All")
   const navigate = useNavigate()
 
   return (
     <div>
       <ToastContainer />
-      <Navbar />
+      <Navbar setShowuserlogin={setShowuserlogin} setUsertype={setUsertype} />
       
       <div className="products-page-container">
         <h1 className="products-page-title">Our Products</h1>
