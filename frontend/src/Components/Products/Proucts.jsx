@@ -13,7 +13,7 @@ const Products = ({ category, limit }) => {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const response = await axios.post("http://localhost:4000/api/product/listproduct")
+            const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/product/listproduct")
             if (response.data.success) {
                 setProducts(response.data.data)
                 const initialQuantities = {}
@@ -48,7 +48,7 @@ const Products = ({ category, limit }) => {
 
     const onsubmit = async (e, item) => {
         e.preventDefault()
-        const response = await axios.post("http://localhost:4000/api/cart/addtocart", {
+        const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/cart/addtocart", {
             user_id: userid,
             quantity: quantities[item._id],
             product_id: item._id,
@@ -71,7 +71,7 @@ const Products = ({ category, limit }) => {
             {displayedProducts.map((item, index) => (
                 <div key={item._id} className='product-card' onClick={() => handleProductClick(item._id)} style={{ cursor: 'pointer' }}>
                     <div className='user-product-image'>
-                        <img src={"http://localhost:4000/images/" + item.image} alt={item.name} />
+                        <img src={"https://craftnest-backend-v5ki.onrender.com/images/" + item.image} alt={item.name} />
                         {item.stock > 10 ? (
                             <span className='stock-high'>In Stock</span>
                         ) : (
