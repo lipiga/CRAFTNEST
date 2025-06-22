@@ -10,7 +10,6 @@ import UserRouter from './Routes/UserRoute.js'
 import ProductRouter from './Routes/ProductRoute.js'
 import CartRouter from './Routes/CartRoute.js'
 import OrderRouter from './Routes/OrderRoute.js'
-import { InsertInitialData } from './adminData.js'
 import { fileURLToPath } from 'url'
 import ReviewRouter from './Routes/ReviewRoute.js'
 
