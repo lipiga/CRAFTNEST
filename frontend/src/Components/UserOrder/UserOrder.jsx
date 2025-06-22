@@ -8,7 +8,7 @@ const UserOrder = () => {
     const [orderItem, setOrderitem] = useState([])
     const [orderstatus, setOrderstatus] = useState(false)
     const GetUserOrder = async () => {
-        const response = await axios.get("http://localhost:4000/api/order/getuserorder", { headers: { 'user_id': userid } })
+        const response = await axios.get("https://craftnest-backend-v5ki.onrender.com/api/order/getuserorder", { headers: { 'user_id': userid } })
         if (response.data.success) {
             setOrderitem(response.data.data)
             setOrderstatus(true)
@@ -38,7 +38,7 @@ const UserOrder = () => {
                 {item.product.map((product, index) => (
                   <div className='order-item' key={index}>
                     <img 
-                      src={"http://localhost:4000/images/" + product.image} 
+                      src={"https://craftnest-backend-v5ki.onrender.com/images/" + product.image} 
                       className='product-image' 
                       alt={product.name} 
                     />
