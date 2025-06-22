@@ -34,7 +34,7 @@ mongoose.connect("mongodb+srv://LipigaAlagarsamy:agipil175@cluster0.00nca4d.mong
 
 
 
-InsertInitialData();
+
 
 //function api's
 
