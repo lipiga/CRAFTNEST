@@ -26,14 +26,14 @@ const Proucts = () => {
 
     const onsubmit = async (e)=> {
         e.preventDefault()
-        const response = await axios.post("http://localhost:4000/api/cart/addtocart",quantity)
+        const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/cart/addtocart",quantity)
         if(response.data.success){
             toast.success(response.data.message)
         }
     }
 
     const fetchProducts = async()=>{
-        const response = await axios.post("http://localhost:4000/api/product/listproduct")
+        const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/product/listproduct")
         if(response.data.success){
             setProduct(response.data.data)
         }
@@ -47,7 +47,7 @@ const Proucts = () => {
             return (
                 <div key={index} className='wrapper'>
                     <div className='product-container'>
-                        <img src={"http://localhost:4000/images/"+item.image} />
+                        <img src={"https://craftnest-backend-v5ki.onrender.com/images/"+item.image} />
                         <h1 className='product-name'>{item.name}</h1>
                         {item.stock>10? <p className='high'>Stock: {item.stock}</p>: <p className='low'>Only {item.stock} left!</p>}
                         <h4 className='price'>₹{item.price}</h4>
