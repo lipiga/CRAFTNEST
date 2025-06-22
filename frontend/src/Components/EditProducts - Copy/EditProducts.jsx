@@ -14,7 +14,7 @@ const EditProducts = () => {
     const navigate = useNavigate()
 
     const GetProduct = async () => {
-        const response = await axios.get("http://localhost:4000/api/product/fetchproduct",{headers:{product_id:productid}})
+        const response = await axios.get("https://craftnest-backend-v5ki.onrender.com/api/product/fetchproduct",{headers:{product_id:productid}})
         if (response.data.success) {
             setDetails(response.data.data)
         }
@@ -46,7 +46,7 @@ const EditProducts = () => {
         product.stock === '' ? form.append("stock", details.stock) : form.append("stock", product.stock)
         form.append("image",image);
 
-        const respond = await axios.post("http://localhost:4000/api/product/updateproduct",form);
+        const respond = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/product/updateproduct",form);
         if (respond.data.success) {
             alert(respond.data.message)
             navigate('/seller')
