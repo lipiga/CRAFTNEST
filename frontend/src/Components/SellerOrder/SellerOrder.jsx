@@ -9,7 +9,7 @@ const SellerOrder = () => {
     const [orderItem, setOrderitem] = useState([]);
 
     const GetUserOrder = async () => {
-        const response = await axios.get("http://localhost:4000/api/order/getsellerorder", { 
+        const response = await axios.get("https://craftnest-backend-v5ki.onrender.com/api/order/getsellerorder", { 
             headers: { 'seller_id': sellerid } 
         });
         if (response.data.success) {
@@ -20,7 +20,7 @@ const SellerOrder = () => {
     const updateOrderStatus = async (orderId, productId, newStatus) => {
         try {
             const response = await axios.put(
-                `http://localhost:4000/api/order/updatestatus/${sellerid}`,
+                `https://craftnest-backend-v5ki.onrender.com/api/order/updatestatus/${sellerid}`,
                 { orderId, productId, status: newStatus }
             );
             if (response.data.success) {
@@ -61,7 +61,7 @@ const SellerOrder = () => {
                             <div key={`${order._id}-${product._id}`} className="seller-order-item">
                                 <div className="seller-order-col-product">
                                     <img 
-                                        src={`http://localhost:4000/images/${product.image}`} 
+                                        src={`https://craftnest-backend-v5ki.onrender.com/images/${product.image}`} 
                                         alt={product.name}
                                         className="seller-order-product-image" 
                                     />
