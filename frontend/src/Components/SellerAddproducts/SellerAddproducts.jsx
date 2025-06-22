@@ -37,7 +37,7 @@ const SellerAddproducts = () => {
 
     console.log(formData)
 
-    const response = await axios.post("http://localhost:4000/api/product/addproduct",formData)
+    const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/product/addproduct",formData)
     if(response.data.success){
       setProduct({
         name: "",
