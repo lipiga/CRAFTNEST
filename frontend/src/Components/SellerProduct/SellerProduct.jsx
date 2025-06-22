@@ -13,7 +13,7 @@ const SellerProduct = () => {
 
   const fetchSellerProducts = async () => {
 
-    const response = await axios.post("http://localhost:4000/api/product/getsellerproduct", {
+    const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/product/getsellerproduct", {
       'seller_id': sellerid
     });
     console.log(sellerid);
@@ -25,7 +25,7 @@ const SellerProduct = () => {
   }
 
   const deleteProduct = async (itemId) => {
-    const response = await axios.post("http://localhost:4000/api/product/deleteproduct", { id: itemId })
+    const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/product/deleteproduct", { id: itemId })
     if (response.data.success) {
       // alert(response.data.message)
       toast.success(response.data.message)
@@ -54,7 +54,7 @@ const SellerProduct = () => {
 
             <div className='seller-product-image-container'>
               <img
-                src={"http://localhost:4000/images/" + item.image}
+                src={"https://craftnest-backend-v5ki.onrender.com/images/" + item.image}
                 className='seller-product-image'
                 alt={item.name}
               />
