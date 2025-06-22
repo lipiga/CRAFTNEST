@@ -14,19 +14,28 @@ import 'react-toastify/dist/ReactToastify.css';
 import ProductView from './Components/ProductView/ProductView'
 import UserProfilePage from './Components/UserProfilePage/UserProfilePage'
 import ProductsPage from './Pages/ProductsPage/ProductsPage'
-
+import UserLogin from './Components/UserLogin/UserLogin';
 
 
 const App = () => {
-  
-  
+
+  const [showUserlogin, setShowuserlogin] = useState(false);
+  const [userType, setUsertype] = useState("");
+
   return (
     <div>
+      {showUserlogin && (
+        <UserLogin 
+          setShowuserlogin={setShowuserlogin} 
+          setUsertype={setUsertype} 
+          userType={userType} 
+        />
+      )}
       <ToastContainer/>
       <Routes>
-        <Route path='/' element={<Home />}/>
+        <Route path="/" element={<Home setShowuserlogin={setShowuserlogin} setUsertype={setUsertype} />} />
         <Route path='/seller' element={<SellerPage />}/>
-        <Route path='/products' element={<ProductsPage />} />
+        <Route path="/products" element={<ProductsPage setShowuserlogin={setShowuserlogin} setUsertype={setUsertype} />} />
         <Route path='/addproducts' element={<SellerAddproducts />} />
         <Route path='/cart' element={<Cart />}/>
         <Route path='/order' element={<Order />}/>
