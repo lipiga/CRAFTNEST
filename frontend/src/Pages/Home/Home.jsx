@@ -10,9 +10,9 @@ import ExploreMenu from '../../Components/ExploreMenu/ExploreMenu'
 import { StoreContext } from '../../Context/StoreContext'
 import { useNavigate } from 'react-router-dom'
 
-const Home = () => {
-  const [showUserlogin, setShowuserlogin] = useState(false)
-  const [userType, setUsertype] = useState("")
+const Home = ({ setShowuserlogin, setUsertype }) => {
+  // const [showUserlogin, setShowuserlogin] = useState(false)
+  // const [userType, setUsertype] = useState("")
   const {cartcount} = useContext(StoreContext)
   const [category, setCategory] = useState("All")
   const [productsLimit, setProductsLimit] = useState(8) // Initial limit of 12 products
@@ -27,7 +27,6 @@ const Home = () => {
     <div>
       <ToastContainer />
       <Navbar setShowuserlogin={setShowuserlogin} setUsertype={setUsertype} />
-      {showUserlogin ? <UserLogin setShowuserlogin={setShowuserlogin} setUsertype={setUsertype} userType={userType} /> : <></>}
       <Header />
       <ExploreMenu category={category} setCategory={setCategory} />
       <Proucts category={category} limit={8} />
