@@ -18,7 +18,7 @@ const UserProfilePage = () => {
         confirmPassword: ''
     });
     const GetUserOrder = async () => {
-        const response = await axios.get("http://localhost:4000/api/order/getuserorder", { headers: { 'user_id': id } })
+        const response = await axios.get("https://craftnest-backend-v5ki.onrender.com/api/order/getuserorder", { headers: { 'user_id': id } })
         if (response.data.success) {
             setOrderitem(response.data.data)
             setOrderstatus(true)
@@ -27,7 +27,7 @@ const UserProfilePage = () => {
         }
     }
     const fetchCart = async () => {
-        const response = await axios.get("http://localhost:4000/api/cart/get", { headers: { 'user_id': id } })
+        const response = await axios.get("https://craftnest-backend-v5ki.onrender.com/api/cart/get", { headers: { 'user_id': id } })
         if (response.data.success) {
             setCart(response.data.data)
             totalAmount()
@@ -39,7 +39,7 @@ const UserProfilePage = () => {
         
         const getUser = async () => {
             try {
-                const response = await axios.get(`http://localhost:4000/api/user/getuser/${id}`);
+                const response = await axios.get(`https://craftnest-backend-v5ki.onrender.com/api/user/getuser/${id}`);
                 if (response.data.success) {
                     setUser(response.data.data);
                     setFormData(prev => ({
@@ -85,7 +85,7 @@ const UserProfilePage = () => {
                 formDataToSend.append('newPassword', formData.newPassword);
             }
 
-            const response = await axios.put(`http://localhost:4000/api/user/update/${id}`, formDataToSend, {
+            const response = await axios.put(`https://craftnest-backend-v5ki.onrender.com/api/user/update/${id}`, formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
@@ -124,7 +124,7 @@ const UserProfilePage = () => {
                 <div className="profile-view">
                     <div className="profile-image-container">
                         <img 
-                            src={user.image ? `http://localhost:4000/images/${user.image}` : '/default-profile.png'} 
+                            src={user.image ? `https://craftnest-backend-v5ki.onrender.com/images/${user.image}` : '/default-profile.png'} 
                             alt="Profile" 
                             className="profile-image"
                         />
