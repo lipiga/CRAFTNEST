@@ -19,7 +19,7 @@ const Cart = () => {
 
   const fetchCart = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/cart/get", {
+      const response = await axios.get("https://craftnest-backend-v5ki.onrender.com/api/cart/get", {
         headers: { 'user_id': userid }
       });
       if (response.data.success) {
@@ -39,7 +39,7 @@ const Cart = () => {
 
   const DeleteCart = async (cartId) => {
     try {
-      const response = await axios.post("http://localhost:4000/api/cart/delete", {
+      const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/cart/delete", {
         id: cartId
       });
       if (response.data.success) {
@@ -65,7 +65,7 @@ const Cart = () => {
               <p onClick={() => DeleteCart(item._id)} className="remove-item">X</p>
               <div className="item-details">
                 <img 
-                  src={`http://localhost:4000/images/${item.image}`} 
+                  src={`https://craftnest-backend-v5ki.onrender.com/images/${item.image}`} 
                   className="item-image" 
                   alt={item.name} 
                 />
