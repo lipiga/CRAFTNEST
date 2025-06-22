@@ -19,7 +19,15 @@ const app = express()
 const port = process.env.PORT || 4000
 
 app.use(express.json())
-app.use(cors())
+const allowedOrigins = [
+  "http://localhost:5173", // Vite local dev
+  "https://craftnest-frontend.onrender.com"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
