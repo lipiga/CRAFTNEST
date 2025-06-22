@@ -22,7 +22,7 @@ const EditProducts = () => {
         const fetchProduct = async () => {
             try {
                 const response = await axios.get(
-                    `http://localhost:4000/api/product/fetchproduct/${productId}`
+                    `https://craftnest-backend-v5ki.onrender.com/api/product/fetchproduct/${productId}`
                 );
                 if (response.data.success) {
                     setProduct({
@@ -61,7 +61,7 @@ const EditProducts = () => {
             }
 
             const response = await axios.post(
-                "http://localhost:4000/api/product/updateproduct",
+                "https://craftnest-backend-v5ki.onrender.com/api/product/updateproduct",
                 formData,
                 {
                     headers: {
