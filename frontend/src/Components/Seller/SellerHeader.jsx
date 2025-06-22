@@ -9,7 +9,7 @@ const SellerHeader = () => {
   
   const sellerDetails = JSON.parse(localStorage.getItem("sellerdetails"));
   const profileImage = sellerDetails?.image 
-    ? `http://localhost:4000/images/${sellerDetails.image}`
+    ? `https://craftnest-backend-v5ki.onrender.com/images/${sellerDetails.image}`
     : 'default-profile.png';
 
   const handleLogout = () => {
