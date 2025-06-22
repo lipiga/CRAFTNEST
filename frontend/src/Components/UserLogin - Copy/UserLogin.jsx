@@ -36,7 +36,7 @@ const UserLogin = ({setShowuserlogin,setUsertype,userType}) => {
         formData.append("type",data.type)
         formData.append("image",image)
 
-        const response = await axios.post("http://localhost:4000/api/user/register",formData)
+        const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/user/register",formData)
         if(response.data.success){
             toast.success(response.data.message)
             setShowuserlogin(false)
@@ -53,7 +53,7 @@ const UserLogin = ({setShowuserlogin,setUsertype,userType}) => {
     }
     const onLogin = async(e)=>{
         e.preventDefault()
-        const response = await axios.post("http://localhost:4000/api/user/login",logindata)
+        const response = await axios.post("https://craftnest-backend-v5ki.onrender.com/api/user/login",logindata)
         if(response.data.success){
             
             setShowuserlogin(false)
