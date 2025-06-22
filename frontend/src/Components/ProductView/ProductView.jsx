@@ -125,7 +125,7 @@ const ProductView = () => {
             <div className="product-view__card">
               <div className="product-view__image-container">
                 <img 
-                  src={"http://localhost:4000/images/" + product.image} 
+                  src={"https://craftnest-backend-v5ki.onrender.com/images/" + product.image} 
                   alt={product.name} 
                   className="product-view__image"
                 />
