@@ -28,7 +28,7 @@ const Order = () => {
     
 
     const fetchCart = async () => {
-      const response = await axios.get("http://localhost:4000/api/cart/get", { 
+      const response = await axios.get("https://craftnest-backend-v5ki.onrender.com/api/cart/get", { 
           headers: { 'user_id': userid } 
       });
       
@@ -80,7 +80,7 @@ const Order = () => {
           };
   
           const response = await axios.post(
-              "http://localhost:4000/api/order/placeorder", 
+              "https://craftnest-backend-v5ki.onrender.com/api/order/placeorder", 
               orderData
           );
   
