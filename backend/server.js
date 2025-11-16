@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 
-mongoose.connect("mongodb+srv://LipigaAlagarsamy:agipil175@cluster0.00nca4d.mongodb.net/frostbyte").then(console.log("Database Connected"))
+mongoose.connect("mongodb+srv://DBUSERNAME:DBPASSWORD5@cluster0.00nca4d.mongodb.net/frostbyte").then(console.log("Database Connected"))
 
 
 
